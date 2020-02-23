@@ -1,5 +1,5 @@
 import * as React from "../../node_modules/react";
-import "./Styles/Style.css"
+import "./Styles/StyleMain.css"
 
 const App  = () => {
     return(

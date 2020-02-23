@@ -1,6 +1,9 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path");
+
 module.exports = {
     // change to .tsx if necessary
-    entry: './Src/Components/App.tsx',
+    entry: './Src/index.tsx',
     output: {
       filename: './bundle.js'
     },
@@ -15,6 +18,9 @@ module.exports = {
         // addition - add source-map support
         { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
       ]
+    },
+    devServer: {
+      contentBase: "./Src",
     },
     externals: {
       "react": "React",
